@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Date Object Example</title>
+</head>
+<body>
+    <h1>JavaScript Date Object Example</h1>
+    
+    <script>
+        // Create a new Date object with the current date and time
+        const currentDate = new Date();
+        
+        // Display current date and time
+        document.body.innerHTML += `<p>Current Date and Time: ${currentDate}</p>`;
+        
+        // Get individual components of the current date
+        const year = currentDate.getFullYear(); // Get the year
+        const month = currentDate.getMonth() + 1; // Get the month (0-based, so adding 1)
+        const day = currentDate.getDate(); // Get the day of the month
+        const hours = currentDate.getHours(); // Get the hour
+        const minutes = currentDate.getMinutes(); // Get the minutes
+        const seconds = currentDate.getSeconds(); // Get the seconds
+
+        document.body.innerHTML += `<p>Year: ${year}</p>`;
+        document.body.innerHTML += `<p>Month: ${month}</p>`;
+        document.body.innerHTML += `<p>Day: ${day}</p>`;
+        document.body.innerHTML += `<p>Hours: ${hours}</p>`;
+        document.body.innerHTML += `<p>Minutes: ${minutes}</p>`;
+        document.body.innerHTML += `<p>Seconds: ${seconds}</p>`;
+
+        // Create a specific date: January 1, 2020 at 12:00 PM
+        const specificDate = new Date(2020, 0, 1, 12, 0, 0); // Note: month is 0-based
+        document.body.innerHTML += `<p>Specific Date (January 1, 2020 at 12:00 PM): ${specificDate}</p>`;
+
+        // Formatting the date in a human-readable format
+        const formattedDate = currentDate.toLocaleDateString(); // Default format
+        const formattedTime = currentDate.toLocaleTimeString(); // Default time format
+        document.body.innerHTML += `<p>Formatted Date: ${formattedDate}</p>`;
+        document.body.innerHTML += `<p>Formatted Time: ${formattedTime}</p>`;
+
+        // Showing UTC time for comparison
+        const utcDate = currentDate.toUTCString(); // Convert to UTC
+        document.body.innerHTML += `<p>UTC Date and Time: ${utcDate}</p>`;
+    </script>
+</body>
+</html>

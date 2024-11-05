@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Optional Chaining Example</title>
+</head>
+<body>
+    <h1>Optional Chaining Example</h1>
+
+    <script>
+        // Example object with nested properties
+        const user = {
+            name: 'John Doe',
+            address: {
+                street: '123 Main St',
+                city: 'Anytown',
+                postalCode: {
+                    code: '12345'
+                }
+            }
+        };
+
+        // Using optional chaining to safely access nested properties
+        const street = user.address?.street; // '123 Main St'
+        const postalCode = user.address?.postalCode?.code; // '12345'
+        const country = user.address?.country?.name; // undefined (since country is not defined)
+
+        // Display the results
+        document.body.innerHTML += `<p>Street: ${street}</p>`;
+        document.body.innerHTML += `<p>Postal Code: ${postalCode}</p>`;
+        document.body.innerHTML += `<p>Country: ${country ?? 'Not Available'}</p>`;
+    </script>
+</body>
+</html>

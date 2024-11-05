@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Math Object Example</title>
+</head>
+<body>
+    <h1>JavaScript Math Object Example</h1>
+    
+    <script>
+        // Basic Math Operations
+
+        // Math.PI - The value of Pi
+        const piValue = Math.PI;
+
+        // Math.round() - Round a number to the nearest integer
+        const roundedValue = Math.round(4.7);  // Rounds to 5
+
+        // Math.floor() - Round a number down to the nearest integer
+        const flooredValue = Math.floor(4.7);  // Rounds down to 4
+
+        // Math.ceil() - Round a number up to the nearest integer
+        const ceiledValue = Math.ceil(4.1);  // Rounds up to 5
+
+        // Math.random() - Generate a random number between 0 (inclusive) and 1 (exclusive)
+        const randomValue = Math.random();  // Random number between 0 and 1
+
+        // Math.max() - Find the maximum number from a list of numbers
+        const maxValue = Math.max(1, 5, 3, 9, 2);  // Returns 9
+
+        // Math.min() - Find the minimum number from a list of numbers
+        const minValue = Math.min(1, 5, 3, 9, 2);  // Returns 1
+
+        // Math.pow() - Calculate a number raised to a power
+        const powerValue = Math.pow(2, 3);  // 2^3 = 8
+
+        // Math.sqrt() - Calculate the square root of a number
+        const sqrtValue = Math.sqrt(16);  // Square root of 16 = 4
+
+        // Displaying the results on the webpage
+        document.body.innerHTML += `<p>Pi Value (Math.PI): ${piValue}</p>`;
+        document.body.innerHTML += `<p>Rounded Value (Math.round(4.7)): ${roundedValue}</p>`;
+        document.body.innerHTML += `<p>Floored Value (Math.floor(4.7)): ${flooredValue}</p>`;
+        document.body.innerHTML += `<p>Ceiled Value (Math.ceil(4.1)): ${ceiledValue}</p>`;
+        document.body.innerHTML += `<p>Random Value (Math.random()): ${randomValue}</p>`;
+        document.body.innerHTML += `<p>Maximum Value (Math.max(1, 5, 3, 9, 2)): ${maxValue}</p>`;
+        document.body.innerHTML += `<p>Minimum Value (Math.min(1, 5, 3, 9, 2)): ${minValue}</p>`;
+        document.body.innerHTML += `<p>Power Value (Math.pow(2, 3)): ${powerValue}</p>`;
+        document.body.innerHTML += `<p>Square Root (Math.sqrt(16)): ${sqrtValue}</p>`;
+    </script>
+</body>
+</html>
